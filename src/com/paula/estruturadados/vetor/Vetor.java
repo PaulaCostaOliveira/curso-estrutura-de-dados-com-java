@@ -1,5 +1,7 @@
 package com.paula.estruturadados.vetor;
 
+import java.util.Arrays;
+
 public class Vetor {
     //Atributos
     private String[] elementos; //Criando um vetor de elementos
@@ -11,7 +13,7 @@ public class Vetor {
         this.elementos = new String[capacidade];
         this.tamanho = 0; //Inicializa o vetor com tamanho igual a 0
     }
-/**********************************************************************************************************************/
+
 /*********************OPÇAO 1 :Criando um novo metodo para adicionar elementos ao vetor********************************/
 
       /*  public void adiciona(String elemento){
@@ -23,30 +25,43 @@ public class Vetor {
         }
 
      */
-/*****************************************************************************************************************/
+
 /*********************OPÇAO 2 :Criando um novo metodo para adicionar elementos ao vetor********************************/
 
-    public void adiciona(String elemento) throws Exception {
+   /* public void adiciona(String elemento) throws Exception {
         //Verificando se o tamanho é menor que a capacidade do vetor de elementos
         if (this.tamanho < this.elementos.length) {
            //Se o tamanho for menor que a capacidade do vetor de elementos, adiciono mais elementos no vetor
             this.elementos[this.tamanho] = elemento;
             this.tamanho++;
-        } else {
-            throw new Exception("Vetor ja está cheio, não é possível adicionar mais elementos.");
+        }else {
+            throw new Exception("Vetor já está cheio, não é possível adicionar mais elementos");
         }
-    }
-/*****************************************************************************************************************/
-/*********************OPÇAO 3 :Criando um novo metodo para adicionar elementos ao vetor********************************/
-/*
-    public boolean adiciona(String elemento) {
-        //Verificando se o tamanho é menor que a capacidade do vetor de elementos
-        if (this.tamanho < this.elementos.length) {
-            //Se o tamanho for menor que a capacidade do vetor de elementos, adiciono mais elementos no vetor
+    }*/
+
+    /*********************OPÇAO 3 :Criando um novo metodo para adicionar elementos ao vetor********************************/
+
+  public boolean adiciona(String elemento) {
+        this.aumentaCapacidade();
+        if (this.tamanho < this.elementos.length){
             this.elementos[this.tamanho] = elemento;
             this.tamanho++;
             return true;
         }
         return false;
-    }*/
+    }
+
+
+    // 0 1 2 3 4 5 6 = tamanho é 5
+    // B C E F G + +
+    //
+
+    public int tamanho(){
+        return this.tamanho;
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(elementos);
+    }
 }

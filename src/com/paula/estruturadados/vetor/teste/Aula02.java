@@ -7,9 +7,5 @@ public class Aula02 {
 
         Vetor vetor = new Vetor(5); //vetor com capacidade para 5 elementos
 
-        int i = 0;
-        i++;
-
-
     }
 }
