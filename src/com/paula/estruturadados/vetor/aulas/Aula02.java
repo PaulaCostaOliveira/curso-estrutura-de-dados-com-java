@@ -1,4 +1,4 @@
-package com.paula.estruturadados.vetor.teste;
+package com.paula.estruturadados.vetor.aulas;
 
 import com.paula.estruturadados.vetor.Vetor;
 
