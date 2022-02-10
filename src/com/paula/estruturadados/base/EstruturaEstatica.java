@@ -2,7 +2,7 @@ package com.paula.estruturadados.base;
 
 public class EstruturaEstatica<T> {
 
-    protected T[] elementos;
+    protected T[] elementos; //protected: permite acesso às classes filhas, mas proíbe a qualquer outro acesso externo.
     protected int tamanho;
 
     @SuppressWarnings("unchecked")
